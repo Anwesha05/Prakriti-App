@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 import pickle
 import numpy as np
-model = pickle.load(open('cropPredict_ML_Model3.pkl','rb'))
+model = pickle.load(open('cropPredict_ML_Model2.pkl','rb'))
 
 app=Flask(__name__)
 @app.route('/')
@@ -12,11 +12,8 @@ def predict():
     N = request.form.get('N')
     P = request.form.get('P')
     K = request.form.get('K')
-    # print(N)
-    # print(P)
-    # print(K)
-    temperature = request.form.get('temp')
-    print(temperature)
+
+    temperature = request.form.get('temperature')
     humidity = request.form.get('humidity')
     ph = request.form.get('ph')
     rainfall = request.form.get('rainfall')
