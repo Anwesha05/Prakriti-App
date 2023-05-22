@@ -1,5 +1,5 @@
-
-Flask~=2.3.2
+numpy
+Flask
 gunicorn
 sklearn
 click==8.1.3
